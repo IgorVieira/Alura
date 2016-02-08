@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+  var ano = 2016
+    , eu  = 21
+    , thais = 17
+    , jon = 23;
+
+  var media = ((eu+thais+jon)/3)
+  var total = eu+thais+jon;
+
+ var pulaLinha  = function(){
+   document.write('<br>')
+ }
+
+ var mostra =  function(frase){
+   document.write(frase)
+   pulaLinha()
+ }
+
+  mostra('Minha idade é: ')
+  mostra(25)
+  mostra('Eu nasci em: ')
+  mostra(ano-21)
+  mostra('A soma das nossas : ')
+  mostra(total)
+  mostra('A media das nossas : ')
+  mostra(Math.round(media))
+  mostra('<hr>')
+
+
+  mostra('Eu nasci em: ')
+  mostra(ano-21)
+
+  mostra('Thais nasceu em: ')
+  mostra(ano-17)
+
+  mostra('Jon nasceu em: ')
+  mostra(ano-23)
+
+</script>
