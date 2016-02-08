@@ -15,10 +15,14 @@
  // var numeroPensado = Math.round(numeroPCDecimais)
 var numeroPensado = Math.round(Math.random()*10)
 var chute = prompt("Digite um número")
-if (chute == numeroPensado) {
+if (numeroPensado == chute) {
     mostra('Você acertou, eu havia pensado justamente no número '+numeroPensado)
-}else{
-    mostra('Hum que pena eu pensei no número: '+numeroPensado)
+}else if(numeroPensado > chute){
+    mostra("Puts, ele era maior =] "+numeroPensado)
+}else {
+    mostra("Puts, ele era menor =] "+numeroPensado)
 }
+
+
 
 </script>

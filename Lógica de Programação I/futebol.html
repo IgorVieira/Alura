@@ -11,10 +11,15 @@
    pulaLinha()
  }
 
- var vitorias = parseInt(prompt('Digite o número de vitórias do seu time:'))
- var empates = parseInt(prompt('Digiteo o número de empates do seu time:'))
+var calculaPontos = function(vitorias, empates){
+  return (vitorias * 3) + empates
+}
 
- var pontos = (vitorias * 3) + empates
+
+ var vitoriasGame = parseInt(prompt('Digite o número de vitórias do seu time:'))
+ var empatesGame = parseInt(prompt('Digiteo o número de empates do seu time:'))
+
+ var pontos = calculaPontos(vitoriasGame, empatesGame)
 
 
  mostra('O seu time tem :'+pontos+' pontos!')
