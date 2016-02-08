@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+var pularLinha =  function(){
+  document.write("<br>")
+}
+
+var mostra =  function(frase){
+  document.write(frase+"<br>")
+  pularLinha()
+}
+
+var alturaInput = prompt("Digite sua altura:")
+var pesoInput = prompt("Digite seu peso:")
+
+var calculeIMC = function(alturaInput, pesoInput){
+  var imc = pesoInput/(alturaInput * alturaInput)
+  return Math.round(imc)
+}
+
+var meuPeso = calculeIMC(alturaInput, pesoInput)
+mostra("Seu peso é: "+meuPeso+"kg")
+mostra("O seu peso está "+ (35-meuPeso)+" quilos da obesidade severa")
+</script>
