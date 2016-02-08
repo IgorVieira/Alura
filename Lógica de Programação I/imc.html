@@ -23,6 +23,15 @@ var meuImc =  calculaImc(alturaInput, pesoInput)
 mostra("Meu IMC é: "+meuImc)
 
 
+if (meuImc < 15) {
+  mostra("Você está abaixo do peso ideal")
+}else if(meuImc > 35){
+  mostra("Você está acima do peso.")
+}else if(meuImc > 15 && meuImc << 35){
+    mostra('Você se encontra em um peso ideal.')
+}
+
+
 
 
 
