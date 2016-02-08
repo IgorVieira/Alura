@@ -1,2 +1,2 @@
-# Alura_study
+# Alura
 Alura Study
