@@ -1,0 +1,58 @@
+<meta charset="utf-8">
+
+<p>Por favor digite 6 números:</p>
+<input type="text" id="numero">
+<input type="submit" id="shoot" value="Chute!">
+<p>Por favor inicie o sorteio!</p>
+<input type="submit" id="random" value="Iniciar">
+<p>Agora compare o resultado:</p>
+<input type="submit" id="compare" value="Compare">
+
+
+<script type="text/javascript">
+
+
+var lotery = []
+var shootingUser = []
+var toCompare = []
+
+var adicionarNumeros = () =>{
+  for (var i = 0; i < 6; i++) {
+      var numberRandom = Math.round( Math.random()*60)
+      lotery.push(numberRandom)
+      console.log(lotery)
+  }
+}
+
+var addNumberUser = () =>{
+
+  var numeroUser = document.getElementById('numero').value
+
+    if (shootingUser.length < 6) {
+      shootingUser.push(numeroUser)
+      console.log(shootingUser)
+    }else{
+      return
+    }
+}
+
+var compareNumbers = () =>{
+  for (var i = 0; i < 6; i++) {
+    if ( shootingUser[i] == lotery[i] ) {
+      toCompare.push(lotery[i]);
+    }
+  }
+  console.log(toCompare)
+}
+
+
+var buttonNumeroUser = document.getElementById('shoot')
+buttonNumeroUser.onclick = addNumberUser;
+
+var clickButton = document.getElementById('random')
+clickButton.onclick = adicionarNumeros;
+
+var butttonCompare = document.getElementById('compare')
+butttonCompare.onclick = compareNumbers;
+
+</script>
