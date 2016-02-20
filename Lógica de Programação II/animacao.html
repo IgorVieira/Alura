@@ -1,0 +1,69 @@
+<meta charset="utf-8">
+<canvas id="tela" width="600" height="400">
+
+</canvas>
+
+<script type="text/javascript">
+
+  var tela =  document.getElementById('tela')
+  var c = tela.getContext("2d")
+
+  var imagem = new Image();
+    imagem.src = "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/c16.16.195.195/s160x160/65671_615420535153235_1075514191_n.jpg?oh=f5867d5edc7163650cc484093a446506&oe=57565722&__gda__=1465369360_5c084f5fb8de861f72e109806e7be3e9";
+
+    var desenhaImagem = (x, y) =>{
+        c.drawImage(imagem, x, y)
+    };
+
+  const limpaTela = () =>{
+    c.clearRect(0,0,600,400)
+  }
+
+  var x = 1
+
+  const desenhar = () =>{
+    limpaTela()
+    desenhaImagem(x,100)
+    x++
+  }
+
+  setInterval(desenhar,30)
+
+
+</script>
+
+
+<!-- <meta charset="utf-8">
+<canvas id="tela" width="600" height="400">
+
+</canvas>
+
+<script type="text/javascript">
+
+  var tela =  document.getElementById('tela')
+  var c = tela.getContext("2d")
+
+  const circulo = (x,y, raio) =>{
+    c.strokeStyle = "blue"
+    c.beginPath()
+    c.arc(x,y,raio,0,2*Math.PI)
+    c.stroke()
+  }
+
+  const limpaTela = () =>{
+    c.clearRect(0,0,600,400)
+  }
+
+  var x = 1
+
+  const desenhar = () =>{
+    //limpaTela()
+    circulo(x, 100,x/2)
+    x++
+  }
+
+  setInterval(desenhar,30)
+
+
+</script>
+ -->
