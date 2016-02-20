@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+
+<input type="text" id="numero" />
+<input type="submit" name="name" id="sortear" value="Adicionar numero!">
+
+
+<script type="text/javascript">
+
+  var sorteados = [];
+
+  var adicionarNumeros = () =>{
+    var numeroAdd = document.getElementById('numero').value
+
+    for (var i = 0; i < sorteados.length; i++) {
+      if (sorteados[i] == numeroAdd) {
+          alert("Numero já sorteado")
+          return;
+      }
+    }
+
+
+
+    sorteados.push(numeroAdd)
+    console.log(sorteados)
+  }
+
+
+  var clickButton = document.getElementById("sortear")
+  clickButton.onclick = adicionarNumeros
+
+
+</script>

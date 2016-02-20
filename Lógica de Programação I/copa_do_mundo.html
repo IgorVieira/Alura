@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+     var mostra = (frase) => {
+       document.write(frase+"<br>")
+     }
+
+    var pularLinha = () => {
+    document.write("<br>")
+   }
+
+  var inicioCopa = parseInt(prompt("Informe o ano inicial da copa"));
+  var anoLimite = parseInt(prompt("Digite um limite para o número de copas do mundo:"));
+
+  while (inicioCopa <= anoLimite) {
+      mostra("Anos de copa do mundo! "+ inicioCopa);
+      inicioCopa = 4+inicioCopa;
+  }
+  mostra("Isso é tudo pessoal!!")
+
+</script>

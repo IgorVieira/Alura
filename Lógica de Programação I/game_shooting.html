@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+
+ var pulaLinha  = () =>{
+   document.write('<br>')
+ }
+
+ var mostra = (frase) =>{
+   document.write(frase)
+   pulaLinha()
+ }
+
+ // var numeroPCDecimais = Math.random() * 10
+ // var numeroPensado = Math.round(numeroPCDecimais)
+var numeroPensado = Math.round(Math.random()*10)
+
+var numeroChutes = 1;
+
+while (numeroChutes <= 3) {
+  var numeroPensado = Math.round(Math.random()*10)
+  var chute = prompt("Digite um número")
+  if (numeroPensado == chute) {
+      mostra('Você acertou, eu havia pensado justamente no número '+numeroPensado)
+      break
+  }else if(numeroPensado > chute){
+      mostra("Puts, ele era maior =] "+numeroPensado)
+  }else {
+      mostra("Puts, ele era menor =] "+numeroPensado)
+  }
+  numeroChutes++;
+}
+
+
+
+
+</script>

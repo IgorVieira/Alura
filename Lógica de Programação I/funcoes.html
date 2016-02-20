@@ -1,19 +1,24 @@
 <meta charset="utf-8">
 <script type="text/javascript">
-    var primeira = function(){
-      console.log('1 - antes')
+  var mostra = (frase) =>{
+    document.write(frase+"<br>")
+  }
+
+
+    var primeira = () => {
+      mostra('1 - antes')
       segunda()
-      console.log('1 - depois')
+      mostra('1 - depois')
     }
 
-    var segunda =  function(){
-      console.log('2 - antes')
+    var segunda = () => {
+      mostra('2 - antes')
       terceira()
-      console.log('2 - depois')
+      mostra('2 - depois')
     }
 
-    var terceira =  function(){
-      console.log('3')
+    var terceira = () => {
+      mostra('3')
     }
 
     primeira()

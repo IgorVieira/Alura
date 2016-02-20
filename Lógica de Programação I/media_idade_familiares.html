@@ -1,0 +1,22 @@
+<script type="text/javascript">
+    const mostra = (frase) =>{
+      document.write(frase+'<br>')
+    }
+
+    var quantidadePessoas = parseInt(prompt("Quantas pessoas tem na sua familia?"));
+    var cont = 1
+    var soma = 0
+    while (cont <= quantidadePessoas) {
+            var idadePessoa = parseInt(prompt(`Digite a idade da ${cont} pessoa da sua familia`))
+            soma += idadePessoa;
+            cont++;
+    }
+
+  var media = soma/quantidadePessoas;
+
+  mostra(media)
+
+
+
+
+</script>

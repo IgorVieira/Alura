@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+
+<input type="text" id="number"/>
+<input type="submit"  value="Compare com o meu segredo" id="shooting">
+
+<script type="text/javascript">
+  var secret = [2, 4, 6, 8, 10, 12]
+
+  var look = false;
+
+  var boxNumber =  document.getElementById("number")
+  var clickButton = () =>{
+    for (var i = 0; i < secret.length; i++) {
+       if(secret[i] == boxNumber.value){
+         look = true
+         break
+       }
+    }
+
+    if (look == true) {
+      alert("Congrats!")
+    }else {
+      alert("You failed this city!")
+    }
+
+
+
+  }
+
+  var clickInThisButton = document.getElementById('shooting')
+  clickInThisButton.onclick = clickButton;
+</script>
