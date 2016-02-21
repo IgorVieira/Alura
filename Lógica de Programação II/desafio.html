@@ -1,0 +1,76 @@
+<meta charset="utf-8">
+<canvas id="tela" width="600" height="400">
+
+</canvas>
+
+<script type="text/javascript">
+
+  var tela =  document.getElementById('tela')
+  var c = tela.getContext("2d")
+
+
+
+  const sorteia = (numero) =>{
+     var numeroRecebido = Math.round(Math.random()*numero)
+     return numeroRecebido
+  }
+
+  const cor = (coloracao) =>{
+    c.fillStyle = coloracao
+  }
+
+
+  const circulo = (x,y, raio) =>{
+    c.beginPath()
+    c.arc(x,y,raio,0,2*Math.PI)
+    c.fill()
+  }
+
+
+  const desenhaAlvo = (x, y) => {
+      var raio = 40;
+      cor("white");
+      circulo(x, y, raio);
+      cor("red");
+      circulo(x, y, raio-10);
+      cor("white");
+      circulo(x, y, raio-20);
+      cor("red");
+      circulo(x, y, raio-30);
+  };
+
+
+  const limpa = () =>{
+    c.clearRect(0,0,600,400)
+  }
+
+  var alvoX;
+  var alvoY;
+
+  const desenha = () => {
+    limpa();
+    alvoX = sorteia(600);
+    alvoY = sorteia(400);
+    desenhaAlvo(alvoX, alvoY);
+  };
+
+  const acertarAlvo = (evento) =>{
+
+    var raio = 40;
+    var x =  evento.pageX - tela.offsetLeft;
+    var y = evento.pageY - tela.offsetTop;
+
+    if((x > alvoX - raio) && (x < alvoX + raio) &&
+        (y > alvoY - raio) && (y < alvoY + raio)) {
+            alert("acertou!");
+    }
+
+
+  }
+
+  setInterval(desenha,3000)
+
+  tela.onclick = acertarAlvo
+
+
+</script>
