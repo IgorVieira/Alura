@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:gap="http://phonegap.com/ns/1.0"
+        id="com.iprvieira.cenoura"
+        version="1.0.0">
+
+    <name>
+        Só de Cenoura
+    </name>
+
+    <description>
+        Menu do restaurante Só de Cenoura.
+    </description>
+
+    <author  email="igorvieira@iprvieira.com">
+        Igor Vieira
+    </author>
+
+    <!-- travar rotação -->
+    <preference name="orientation" value="portrait" />
+
+    <!-- permissões -->
+    <preference name="permissions" value="none" />
+
+    <!-- build apenas para android -->
+    <gap:platform name="android" />
+
+
+	<!-- icone para o app -->
+    <icon src="imagens/icon.png"/>
+	
+	<!-- splash do app -->
+    <gap:splash src="imagens/splash.png" />
+
+
+</widget>
