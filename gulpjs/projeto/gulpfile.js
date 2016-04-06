@@ -1,6 +1,7 @@
 var gulp = require('gulp')
   ,imagemin = require('gulp-imagemin')
-  ,clean = require('gulp-clean');
+  ,clean = require('gulp-clean')
+  ,concat =  require('gulp-concat')
 
 gulp.task('copy', ['clean'], function() {
     return gulp.src('src/**/*')
