@@ -1,0 +1,30 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
+h2{
+    background: #5599DD;
+    color:#DDDDDD;
+    padding: 5px;
+}
+
+.exp{
+    text-indent: 50px;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+#email{
+    text-decoration: none;
+    font-style:italic;
+}
+
+.conteudo{
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header{
+    text-align: center;
+}
